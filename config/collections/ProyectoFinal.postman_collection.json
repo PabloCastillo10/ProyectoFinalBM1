@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "b3d86153-a3f8-4f26-8ef7-533127a27aa4",
+		"name": "ProyectoFinal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41636862"
+	},
+	"item": [
+		{
+			"name": "CLIENTE AUTENTICADOR",
+			"item": [
+				{
+					"name": "Registrar Usuario",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Daniel\",\r\n    \"surname\" : \"ramirez\",\r\n    \"username\" : \"Dramirez\",\r\n    \"password\" : \"12345678\",\r\n    \"email\" : \"Dramirez@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logearse con CLIENTE_ROLE",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"Dramirez\",\r\n    \"password\" : \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Datos Especificos Usuario",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZTQ0ZmI2NTk0NDI2OWYxMTI3ZjgiLCJpYXQiOjE3NDA0OTk4MzcsImV4cCI6MTc0MDUwMzQzN30.tvM0SO8UKbT4O9FfEBLhswhiVoSBGg2Puvs3-dl2qak",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"cuxum\",\r\n    \"surname\" : \"ramirez\",\r\n    \"username\" : \"xcastillo\",\r\n    \"email\" : \"Dcastillo@gmail.com\",\r\n    \"oldPassword\" : \"87654321\",\r\n    \"newPassword\" : \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/users/67bde44fb65944269f1127f8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"users",
+								"67bde44fb65944269f1127f8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activar Cliente",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZjA4NDA3ZGFkZTRjNzM3ZDU0MGYiLCJpYXQiOjE3NDA1MDExMzQsImV4cCI6MTc0MDUwNDczNH0.yKBxa38arDZ2QXbFEb9_A7kdSYNJjSkw0ZMAYL3GJ7o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/users/activate/67bde44fb65944269f1127f8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"users",
+								"activate",
+								"67bde44fb65944269f1127f8"
+							],
+							"query": [
+								{
+									"key": "x-token",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desactivar Cliente",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZTQ0ZmI2NTk0NDI2OWYxMTI3ZjgiLCJpYXQiOjE3NDA1MDA2NjAsImV4cCI6MTc0MDUwNDI2MH0.IhBjhF093sYYyB5d-7G7mQIpF-jOccZLEbSKWcp2u8M",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/users/67bde44fb65944269f1127f8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"users",
+								"67bde44fb65944269f1127f8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

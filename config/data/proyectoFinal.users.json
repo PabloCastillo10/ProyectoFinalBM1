@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "67bde44fb65944269f1127f8"
+  },
+  "name": "cuxum",
+  "surname": "ramirez",
+  "username": "xcastillo",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$QgSEsdz6KJxTYj9Xeh6rQQ$fAAb1hz4SJE0ng60XUoVoXiQVzTlG7c6vbDGgLT4m50",
+  "email": "pcastillo@gmail.com",
+  "role": "CLIENTE_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-25T15:39:59.123Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T16:42:23.046Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bdf08407dade4c737d540f"
+  },
+  "name": "Daniel",
+  "surname": "ramirez",
+  "username": "dramirez",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$/zH4lS/5W7N0pQx90H7k9Q$gFH87iVg4+Zay24DuVOz9xBoRBdDcQgisnHLvzEX1WI",
+  "email": "dramirez@gmail.com",
+  "role": "CLIENTE_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-25T16:32:04.089Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T16:32:04.089Z"
+  }
+}]
