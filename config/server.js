@@ -4,6 +4,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import {dbConnection} from './mongo.js';
+import userRoutes from '../src/users/user.routes.js'
+import { createAdmin } from '../src/users/user-controller.js';
 const configurarMiddlewares = (app) => {
     app.use(express.urlencoded({extended: false}));
     app.use(cors());
@@ -17,6 +19,7 @@ const configurarRutas = () => {
     try{
         await dbConnection();
         console.log("Conexión a la base de datos exitosa");
+        await createAdmin();
     }catch(error){
         console.error('Error conectando a la base de datos', error);
         process.exit(1);

@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "67bde44fb65944269f1127f8"
+  },
+  "name": "cuxum",
+  "surname": "ramirez",
+  "username": "xcastillo",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$QgSEsdz6KJxTYj9Xeh6rQQ$fAAb1hz4SJE0ng60XUoVoXiQVzTlG7c6vbDGgLT4m50",
+  "email": "pcastillo@gmail.com",
+  "role": "CLIENTE_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-25T15:39:59.123Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T16:42:23.046Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bdf08407dade4c737d540f"
+  },
+  "name": "Daniel",
+  "surname": "ramirez",
+  "username": "dramirez",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$/zH4lS/5W7N0pQx90H7k9Q$gFH87iVg4+Zay24DuVOz9xBoRBdDcQgisnHLvzEX1WI",
+  "email": "dramirez@gmail.com",
+  "role": "CLIENTE_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-25T16:32:04.089Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-25T16:32:04.089Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bf414faf922bf615b98ee9"
+  },
+  "name": "Elmer",
+  "surname": "Santos",
+  "username": "esantos",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$mo1wZ7Rb3IK/avEZ3dPg+w$10S2LZW2+R0ArZFX+TDCtKA+hgAycbVimh9hFDDxcDU",
+  "email": "Esantos@gmail.com",
+  "role": "ADMIN_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-26T16:29:03.525Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T16:29:03.525Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bf472c0e1a4d14e494e3fc"
+  },
+  "name": "Ian",
+  "surname": "alfaro",
+  "username": "ialfaro",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$lXEBx2RErGY4zJcBhBRi1w$q5YHISNTWlMANhwDPEAMCC7TOKZq4qZN4McZe/7eq9U",
+  "email": "ialfaro@gmail.com",
+  "role": "CLIENTE_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-26T16:54:04.350Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T17:40:51.960Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bf47450e1a4d14e494e3ff"
+  },
+  "name": "monroy",
+  "surname": "vargas",
+  "username": "mvargas",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$7dc7vqnD0pbKHK43tlK2FA$sQOqogG6m0R6DmgO52MgvRTrtno/4DqBSgQudhPzbNM",
+  "email": "krodriguez@gmail.com",
+  "role": "CLIENTE_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-26T16:54:29.017Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T17:22:59.817Z"
+  }
+}]
