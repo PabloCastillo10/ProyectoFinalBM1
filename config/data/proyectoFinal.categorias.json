@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "67bf690746bc0236e128f0fc"
+  },
+  "name": "Defecto",
+  "description": "Categoría por defecto",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-26T19:18:31.042Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T19:57:19.479Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bf6d564cf084b642f72cdc"
+  },
+  "name": "Verduras",
+  "description": "Verduras frescas",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-26T19:36:54.386Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T19:36:54.386Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bf6fd5d7fd2cfa7234e7a2"
+  },
+  "name": "Frutas",
+  "description": "Frutas frescas",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-26T19:47:33.032Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T19:59:10.124Z"
+  }
+}]

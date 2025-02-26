@@ -350,6 +350,181 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "Agregar Categoria Con Validacion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA1OTg0ODYsImV4cCI6MTc0MDYwMjA4Nn0.gDagq_7LOaOeKoRuc8yQ4DiVVf_B99CIR-kIniSFtYU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Frutas\",\r\n    \"description\" : \"Frutas frescas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/categorias/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"categorias",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Categoria",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/categorias/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"categorias",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Categoria Con Validacion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MDMzNzUsImV4cCI6MTc0MDYwNjk3NX0.MXIbzkfw0Ctdq9pRDYxQL79sUYFa03A07IoKOxEA_vE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Electrodomesticos\",\r\n    \"description\" : \"Buena calidad \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/categorias/67bf690746bc0236e128f0fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"categorias",
+								"67bf690746bc0236e128f0fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Categoria",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA1OTkxMzMsImV4cCI6MTc0MDYwMjczM30.PQJ5B7nvh6Vqhrw3WVrns2m_DW08K6PdB3DjX_pbWEI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/categorias/67bf6fd5d7fd2cfa7234e7a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"categorias",
+								"67bf6fd5d7fd2cfa7234e7a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activar Categoria",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA1OTk1NTIsImV4cCI6MTc0MDYwMzE1Mn0.-R0n0LuQ4AB3wZZ7EUb3-qxz63NikURw4u3ZVDywmPU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/categorias/activate/67bf6fd5d7fd2cfa7234e7a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"categorias",
+								"activate",
+								"67bf6fd5d7fd2cfa7234e7a2"
+							],
+							"query": [
+								{
+									"key": "x-token",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
