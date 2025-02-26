@@ -13,7 +13,8 @@ const configurarMiddlewares = (app) => {
     app.use(helmet());
     app.use(morgan('dev'));
 }
-const configurarRutas = () => {
+const configRoutes = (app) => {
+    app.use('/proyectofinal/users', userRoutes);
 }
  const conectarDB = async  () => {
     try{
@@ -30,7 +31,7 @@ export const initServer = async () => {
     const port = process.env.PORT || 3000;
     await conectarDB();
     configurarMiddlewares(app);
-    configurarRutas(app);
+    configRoutes(app);
     app.listen(port, () => {
         console.log(`Server running on port ${port}`);
     });
