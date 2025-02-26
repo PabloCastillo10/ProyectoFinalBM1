@@ -23,7 +23,7 @@
     "$date": "2025-02-26T19:36:54.386Z"
   },
   "updatedAt": {
-    "$date": "2025-02-26T19:36:54.386Z"
+    "$date": "2025-02-26T23:36:32.583Z"
   }
 },
 {
@@ -38,5 +38,19 @@
   },
   "updatedAt": {
     "$date": "2025-02-26T19:59:10.124Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bf968679bca892ba1ede20"
+  },
+  "name": "Tecnologia",
+  "description": "De ultima generacion",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-26T22:32:38.796Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-26T22:32:38.796Z"
   }
 }]

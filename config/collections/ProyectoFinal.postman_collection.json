@@ -364,13 +364,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA1OTg0ODYsImV4cCI6MTc0MDYwMjA4Nn0.gDagq_7LOaOeKoRuc8yQ4DiVVf_B99CIR-kIniSFtYU",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MDkxNDEsImV4cCI6MTc0MDYxMjc0MX0.b-pLdDd6I-rF__6guDWRnLC9mflHCyd_jOcRRNU70rA",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Frutas\",\r\n    \"description\" : \"Frutas frescas\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"Tecnologia\",\r\n    \"description\" : \"De ultima generacion\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -466,12 +466,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA1OTkxMzMsImV4cCI6MTc0MDYwMjczM30.PQJ5B7nvh6Vqhrw3WVrns2m_DW08K6PdB3DjX_pbWEI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTI4ODQsImV4cCI6MTc0MDYxNjQ4NH0.O31-WfvD0YEvJWsXNZrq9VGnP8IJ34RmruGa2F1yIYY",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/categorias/67bf6fd5d7fd2cfa7234e7a2",
+							"raw": "http://localhost:3000/proyectofinal/categorias/67bf6d564cf084b642f72cdc",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -480,7 +480,7 @@
 							"path": [
 								"proyectofinal",
 								"categorias",
-								"67bf6fd5d7fd2cfa7234e7a2"
+								"67bf6d564cf084b642f72cdc"
 							]
 						}
 					},
@@ -496,12 +496,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA1OTk1NTIsImV4cCI6MTc0MDYwMzE1Mn0.-R0n0LuQ4AB3wZZ7EUb3-qxz63NikURw4u3ZVDywmPU",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTI4ODQsImV4cCI6MTc0MDYxNjQ4NH0.O31-WfvD0YEvJWsXNZrq9VGnP8IJ34RmruGa2F1yIYY",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/categorias/activate/67bf6fd5d7fd2cfa7234e7a2",
+							"raw": "http://localhost:3000/proyectofinal/categorias/activate/67bf6d564cf084b642f72cdc",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -511,7 +511,7 @@
 								"proyectofinal",
 								"categorias",
 								"activate",
-								"67bf6fd5d7fd2cfa7234e7a2"
+								"67bf6d564cf084b642f72cdc"
 							],
 							"query": [
 								{
@@ -519,6 +519,204 @@
 									"value": "",
 									"disabled": true
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Producto",
+			"item": [
+				{
+					"name": "Agregar Producto Con Validacion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MDk1MjUsImV4cCI6MTc0MDYxMzEyNX0.x7FCVC-arFzVKqtiMMz3LTb7J7hXsUdwX894ytliFko",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Peras\",\r\n    \"description\" : \"De Guatemala\",\r\n    \"price\" : \"100\",\r\n    \"stock\" : \"0\",\r\n    \"categoria\" : \"Frutas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/productos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Productos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/productos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Productos con Validacion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTA2NDIsImV4cCI6MTc0MDYxNDI0Mn0.P2u8lcty4cKvGakpOZR0hzHfDBy3P30dmwZxemu7Fvk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Zanahoria\",\r\n    \"description\" : \"De Mexico\",\r\n    \"price\" : \"100\",\r\n    \"stock\" : \"40\",\r\n    \"categoria\" : \"Verduras\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/productos/67bf9b07cdf367a5ebef2c7f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"productos",
+								"67bf9b07cdf367a5ebef2c7f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Desactivar Producto Con Validacion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTEwNDMsImV4cCI6MTc0MDYxNDY0M30.S0gRDlfPqByUJUavpTakL2Mzhhta-c4FMEkJLhqAWrI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/productos/67bf9b07cdf367a5ebef2c7f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"productos",
+								"67bf9b07cdf367a5ebef2c7f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Activar Producto Validacion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTEzNzEsImV4cCI6MTc0MDYxNDk3MX0.g0TIihVfWVE-pdoDR-epaHnRblxnZtP3NmgPMaqTRyg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/productos/activate/67bf9b07cdf367a5ebef2c7f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"productos",
+								"activate",
+								"67bf9b07cdf367a5ebef2c7f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Productos Agotados Con Validacion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTIwNzMsImV4cCI6MTc0MDYxNTY3M30.9cMrKVRYeEMZ5518hJXtZHp9OP_GvexKilEgyJCoEv0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/productos/agotados",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"productos",
+								"agotados"
 							]
 						}
 					},

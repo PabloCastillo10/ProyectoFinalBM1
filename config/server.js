@@ -6,6 +6,7 @@ import morgan from 'morgan';
 import {dbConnection} from './mongo.js';
 import userRoutes from '../src/users/user.routes.js'
 import categoriaRoutes from '../src/categorias/categoria.routes.js'
+import productoRoutes from '../src/productos/producto.routes.js'
 import { createAdmin } from '../src/users/user-controller.js';
 import { categoriaDefecto } from '../src/categorias/categoria.controller.js';
 const configurarMiddlewares = (app) => {
@@ -18,6 +19,7 @@ const configurarMiddlewares = (app) => {
 const configRoutes = (app) => {
     app.use('/proyectofinal/users', userRoutes);
     app.use('/proyectofinal/categorias', categoriaRoutes);
+    app.use('/proyectofinal/productos', productoRoutes);
 }
  const conectarDB = async  () => {
     try{

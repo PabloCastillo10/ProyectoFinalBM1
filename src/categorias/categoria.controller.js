@@ -1,3 +1,4 @@
+import productoModel from "../productos/producto.model.js";
 import categoriaModel from "./categoria.model.js";
 import { request, response } from "express";
 
@@ -91,6 +92,16 @@ export const deleteCategory = async (req, res) => {
                 msg: 'No puedes desactivar o eliminar la categoría por defecto General'
             });
         } 
+
+        const productoAsociado = await productoModel.find({categoria: id})
+
+        if (productoAsociado.length > 0) {
+            await productoModel.updateMany(
+                {categoria: id},
+                {categoria: categoriaGeneral._id}
+                 
+            )
+        }
 
       
         const categoria = await categoriaModel.findByIdAndUpdate(id, { estado: false }, { new: true }); 
