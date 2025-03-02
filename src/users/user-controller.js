@@ -271,6 +271,8 @@ export const createAdmin = async (req, res) => {
     }
 }
 
+//////////////////////////////////////////////////////////////////// GESTION USUARIOS //////////////////////////////////
+
 
 export const updateRole = async (req , res) => {
     try {
