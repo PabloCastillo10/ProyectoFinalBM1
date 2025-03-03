@@ -52,7 +52,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\" : \"esantos\",\r\n    \"password\" : \"12345678\"\r\n}",
+							"raw": "{\r\n    \"username\" : \"ialfaro\",\r\n    \"password\" : \"12345678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -602,13 +602,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTA2NDIsImV4cCI6MTc0MDYxNDI0Mn0.P2u8lcty4cKvGakpOZR0hzHfDBy3P30dmwZxemu7Fvk",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA5NjgxOTYsImV4cCI6MTc0MDk3MTc5Nn0.Hds2TrmElKAKJkCFsy9_q6PPuFmrRffrI0xQqpEdfj8",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Zanahoria\",\r\n    \"description\" : \"De Mexico\",\r\n    \"price\" : \"100\",\r\n    \"stock\" : \"40\",\r\n    \"categoria\" : \"Verduras\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"Naranja\",\r\n    \"description\" : \"Fresca\",\r\n    \"price\" : \"100\",\r\n    \"stock\" : \"30\",\r\n    \"categoria\" : \"Frutas\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -616,7 +616,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/productos/67bf9b07cdf367a5ebef2c7f",
+							"raw": "http://localhost:3000/proyectofinal/productos/67bf9aa5cdf367a5ebef2c73",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -625,7 +625,7 @@
 							"path": [
 								"proyectofinal",
 								"productos",
-								"67bf9b07cdf367a5ebef2c7f"
+								"67bf9aa5cdf367a5ebef2c73"
 							]
 						}
 					},
@@ -702,7 +702,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTIwNzMsImV4cCI6MTc0MDYxNTY3M30.9cMrKVRYeEMZ5518hJXtZHp9OP_GvexKilEgyJCoEv0",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA5Njg0NDksImV4cCI6MTc0MDk3MjA0OX0.u_uOf4fWov8lFlVj3OsVddYKj3GSygZHVA6fwN22wx0",
 								"type": "text"
 							}
 						],
@@ -844,6 +844,109 @@
 								"users",
 								"categorias",
 								"67bf6fd5d7fd2cfa7234e7a2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carrito",
+			"item": [
+				{
+					"name": "Agregar Producto Carrito",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDcyYzBlMWE0ZDE0ZTQ5NGUzZmMiLCJpYXQiOjE3NDA5NjgyNTcsImV4cCI6MTc0MDk3MTg1N30.r939aEtyTU6mCC8NN0eB2UoU8TStEqqmkfXDfId8be8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioId\" : \"67bf472c0e1a4d14e494e3fc\",\r\n    \"productoId\" : \"67bf9aa5cdf367a5ebef2c73\",\r\n    \"cantidad\" : \"30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/carrito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"carrito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Listado Carrito",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDcyYzBlMWE0ZDE0ZTQ5NGUzZmMiLCJpYXQiOjE3NDA5NjY1ODgsImV4cCI6MTc0MDk3MDE4OH0.G4KKhcAcnA1cGsuXo4rhPR5DNCcjvSP8bBUjShS5Ls4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/carrito/67c50c5d79de31e9fc0d704b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"carrito",
+								"67c50c5d79de31e9fc0d704b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Proceso de Compra",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDcyYzBlMWE0ZDE0ZTQ5NGUzZmMiLCJpYXQiOjE3NDA5Njk2NjcsImV4cCI6MTc0MDk3MzI2N30.9eWQkQ7qtBUwfCn3bN830eZSJa9J1vjG45G8AOYdaUg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/carrito/compra",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"carrito",
+								"compra"
 							]
 						}
 					},
