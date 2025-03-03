@@ -1,6 +1,7 @@
 import { Router } from "express";
 
-import { login, register, updateProfile, getUsers, deleteUser, activateUser, editUser, updateRole, deleteCliente } from "./user-controller.js";
+import { login, register, updateProfile, getUsers, deleteUser, activateUser, editUser, updateRole, deleteCliente, 
+    ObtenerProductoMasVendido, obtenerProductosCategoria, buscarProductoPorNombre, getCategories } from "./user-controller.js";
 
 import { validarCampos } from "../../middlewares/validar-campos.js";
 
@@ -29,4 +30,11 @@ router.put("/updateRole/:id", validarUserJWT, updateRole, validarCampos);
 
 router.delete("/deleteCliente/:id", validarUserJWT, deleteCliente, validarCampos);
 
+router.get('/masvendido', ObtenerProductoMasVendido);
+
+router.get('/categorias/:id', obtenerProductosCategoria);
+
+router.get('/buscar/:name', buscarProductoPorNombre);
+
+router.get('/categorias', getCategories);
 export default router;

@@ -2,7 +2,8 @@ import userModel from "./user-model.js";
 import {hash, verify} from 'argon2';
 import { generarJWT } from "../../helpers/generate-jwt.js";
 import  { response, request } from "express";
-
+import productoModel from "../productos/producto.model.js";
+import categoriaModel from "../categorias/categoria.model.js";
 
 export const login = async (req, res) => {
 
@@ -404,5 +405,66 @@ export const deleteCliente = async (req, res) => {
     } catch (error) {
         console.error(error);
         res.status(500).json({ msg: "Error al eliminar cliente", error: error.message });
+    }
+}
+
+/////////////////////////////////// EXPLORACION DE PRODUCTOS CLIENTES ///////////////////////////////////
+
+
+export const ObtenerProductoMasVendido = async (req, res) => {
+    try {
+        const productoMasVendido = await productoModel.find().sort({ sold: -1 }).limit(5);
+        res.status(200).json({
+            success: true,
+            msg: "Producto más vendido obtenido correctamente",
+            productoMasVendido
+        });
+       } catch (error) {
+        console.error(error);
+        res.status(500).json({msg: "Hubo un error en la obtención del producto más vendido"});
+   
+    }
+}
+
+export const buscarProductoPorNombre = async (req, res) => {
+    try {
+        const { name } = req.params;
+        const productos = await productoModel.find({ name: new RegExp(name, 'i') });
+        res.status(200).json({
+            success: true,
+            msg: "Productos obtenidos correctamente",
+            productos
+        });
+       } catch (error) {
+        console.error(error);
+        res.status(500).json({msg: "Hubo un error en la obtención de productos"});
+   
+    }
+}
+
+
+export const getCategories = async (req, res) => {
+    try {
+        const categorias = await categoriaModel.find();
+        res.status(200).json({ categorias });
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ msg: "Error en el server", error: err.message });
+        }
+}
+
+export const obtenerProductosCategoria = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const productos = await productoModel.find({ categoria: id });
+        res.status(200).json({
+            success: true,
+            msg: "Productos obtenidos correctamente",
+            productos
+        });
+       } catch (error) {
+        console.error(error);
+        res.status(500).json({msg: "Hubo un error en la obtencion de productos"});
+   
     }
 }

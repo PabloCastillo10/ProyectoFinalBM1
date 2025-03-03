@@ -721,6 +721,133 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Productos Mas Vendidos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/productos/masvendido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"productos",
+								"masvendido"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exploracion Producto Cliente",
+			"item": [
+				{
+					"name": "MasVendido",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/users/masvendido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"users",
+								"masvendido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PorNombre",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/users/buscar/M",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"users",
+								"buscar",
+								"M"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categoria",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/users/categorias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"users",
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Producto Por Categoria",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/users/categorias/67bf6fd5d7fd2cfa7234e7a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"users",
+								"categorias",
+								"67bf6fd5d7fd2cfa7234e7a2"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
