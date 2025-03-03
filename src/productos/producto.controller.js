@@ -193,5 +193,3 @@ export const productoMasVendido = async (req, res) => {
    
     }
 }
-
-/////////////////////////////////// EXPLORA
