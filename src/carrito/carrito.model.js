@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const facturaSchema = Schema({
+const carritoSchema = Schema({
     usuario: {
         type: Schema.Types.ObjectId,
         ref: 'User',
@@ -18,21 +18,17 @@ const facturaSchema = Schema({
                 required: true
             },
         }
-    ], 
-    fecha: {
-        type: Date,
-        default: Date.now
-    }
+    ],
 },
 {
     timestamps: true,
-    versionKey: false
+    versionKey: false,
 })
 
-facturaSchema.methods.toJSON = function () {
-    const { __v, _id, ...factura } = this.toObject();
-    factura.id = _id;
-    return factura;
+carritoSchema.methods.toJSON = function () {
+    const { __v, _id,...carrito } = this.toObject();
+    carrito.id = _id;
+    return carrito;
 }
 
-export default model('Factura', facturaSchema);
+export default model('Carrito', carritoSchema);
