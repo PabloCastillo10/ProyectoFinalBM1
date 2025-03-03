@@ -97,14 +97,33 @@ export const procesarCompra = async (req, res) => {
     try {
         const authenticatedUser = req.user;
 
-        if (!authenticatedUser || authenticatedUser.role!== "CLIENTE_ROLE") {
+        if (!authenticatedUser) {
             return res.status(403).json({ msg: "Debes iniciar sesión para procesar la compra" });
         }
 
-        const usuarioId = authenticatedUser._id;
-        const carrito = await carritoModel.findOne({ usuario: usuarioId}).populate('productos.producto');
+        
+        const user = await userModel.findById(authenticatedUser.id);
+        if (!user) {
+            return res.status(404).json({ msg: "Usuario no encontrado en la base de datos" });
+        }
 
-        if (!carrito || carrito.productos.length === 0) {
+        if (authenticatedUser.role !== "CLIENTE_ROLE") {
+            return res.status(403).json({ msg: "No tienes permiso para procesar una compra" });
+        }
+
+    
+        const usuarioId = authenticatedUser._id;
+
+
+        const carrito = await carritoModel.findOne({ usuario: usuarioId }).populate('productos.producto');
+
+        if (!carrito) {
+            return res.status(403).json({ msg: "No puedes procesar la compra de otro usuario o no tienes un carrito activo" });
+        }
+
+        
+
+        if (carrito.productos.length === 0) {
             return res.status(400).json({ msg: "No hay productos en el carrito para procesar la compra" });
         }
 
@@ -112,12 +131,10 @@ export const procesarCompra = async (req, res) => {
         for (const item of carrito.productos) {
             const producto = item.producto;
 
-            if(!producto || item.cantidad > producto.stock) {
-                return res.status(400).json({ msg: "No hay suficiente stock para procesar la compra" });
-            }
+            
 
             totalCompra += producto.price * item.cantidad;
-            producto.stock -= item.cantidad;
+            producto.stock < 0 ? 0 : item.cantidad
             await producto.save();
         }
 
