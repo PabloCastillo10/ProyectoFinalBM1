@@ -88,24 +88,25 @@ export const obtenerCarrito = async (req, res) => {
     }
 }
 
-export const editarCompraCarrito = async (req, res) => {
+export const editarFactura = async (req, res) => {
     try {
+        const { id } = req.params;
         const { productoId, cantidad } = req.body;
         const authenticatedUser = req.user;
 
-       
-        if (!authenticatedUser || authenticatedUser.role !== "CLIENTE_ROLE") {
-            return res.status(403).json({ msg: "Debes iniciar sesión para editar tu carrito" });
+     
+        if (!authenticatedUser || authenticatedUser.role !== "ADMIN_ROLE") {
+            return res.status(403).json({ msg: "No tienes permisos para editar facturas" });
         }
 
-        const usuarioId = authenticatedUser._id;
+     
+        const factura = await facturaModel.findById(id).populate('productos.producto');
 
-        
-        let carrito = await carritoModel.findOne({ usuario: usuarioId });
-        if (!carrito) {
-            return res.status(404).json({ msg: "Carrito no encontrado" });
+        if (!factura) {
+            return res.status(404).json({ msg: "Factura no encontrada" });
         }
 
+      
         if (!Array.isArray(productoId) || !Array.isArray(cantidad)) {
             return res.status(400).json({ msg: "productoId y cantidad deben ser arreglos" });
         }
@@ -114,23 +115,25 @@ export const editarCompraCarrito = async (req, res) => {
             return res.status(400).json({ msg: "La cantidad de productos y cantidades debe coincidir" });
         }
 
+        let totalNuevo = 0;
+
         for (let i = 0; i < productoId.length; i++) {
             const prodId = productoId[i];
             const nuevaCantidad = parseInt(cantidad[i], 10);
 
-           
-            const productoEnCarrito = carrito.productos.find(p => p.producto.toString() === prodId);
-            if (!productoEnCarrito) {
-                return res.status(404).json({ msg: `El producto con ID ${prodId} no está en tu carrito` });
+      
+            const productoEnFactura = factura.productos.find(p => p.producto._id.toString() === prodId);
+            if (!productoEnFactura) {
+                return res.status(404).json({ msg: `El producto con ID ${prodId} no está en la factura` });
             }
 
-            
+        
             const producto = await productoModel.findById(prodId);
             if (!producto) {
                 return res.status(404).json({ msg: `Producto con ID ${prodId} no encontrado` });
             }
 
-            const cantidadAnterior = productoEnCarrito.cantidad;
+            const cantidadAnterior = productoEnFactura.cantidad;
 
            
             if (nuevaCantidad > cantidadAnterior) {
@@ -144,23 +147,30 @@ export const editarCompraCarrito = async (req, res) => {
                 producto.stock += diferencia;
             }
 
-            
-            productoEnCarrito.cantidad = nuevaCantidad;
+        
+            productoEnFactura.cantidad = nuevaCantidad;
 
-            
+           
             await producto.save();
+
+           
+            totalNuevo += producto.price * nuevaCantidad;
         }
 
-       
-        await carrito.save();
+        factura.total = totalNuevo;
+        await factura.save();
 
-        res.status(200).json({ msg: "Productos actualizados en el carrito correctamente", carrito });
+        res.status(200).json({
+            msg: "Factura actualizada correctamente",
+            factura
+        });
 
     } catch (error) {
         console.error(error);
-        res.status(500).json({ msg: "Hubo un error al editar la compra en el carrito" });
+        res.status(500).json({ msg: "Hubo un error al editar la factura", error: error.message });
     }
 };
+;
 
 export const eliminarProductoDelCarrito = async (req, res) => {
     try {
