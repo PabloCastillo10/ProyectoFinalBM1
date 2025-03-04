@@ -18,7 +18,11 @@ const facturaSchema = Schema({
                 required: true
             },
         }
-    ], 
+    ],
+    total: {
+        type: Number,
+        required: true
+    },
     fecha: {
         type: Date,
         default: Date.now

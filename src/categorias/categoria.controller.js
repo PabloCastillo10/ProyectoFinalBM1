@@ -40,7 +40,7 @@ export const updateCategory = async (req, res) => {
         const { name, description } = req.body;
         const authenticatedUser = req.user;
     try {
-       
+            
 
         if (!authenticatedUser || authenticatedUser.role !== "ADMIN_ROLE") {
             return res.status(403).json({ msg: "No tiene permisos para editar  categorías" });

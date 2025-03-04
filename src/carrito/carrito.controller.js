@@ -212,6 +212,7 @@ export const procesarCompra = async (req, res) => {
         const factura = new facturaModel({
             usuario: usuarioId,
             productos: carrito.productos.map(item => ({ producto: item.producto, cantidad: item.cantidad })),
+            total: totalCompra,
             fecha: new Date(),
         })
         await factura.save();
@@ -244,7 +245,8 @@ export const obtenerHistorialFactura = async (req, res) => {
         const usuarioId = authenticatedUser._id;
 
        
-        const carrito = await carritoModel.findOne({ usuario: usuarioId })
+        const carrito = await facturaModel.findOne({ usuario: usuarioId })
+            .populate('usuario', 'name') 
             .populate('productos.producto') 
             .sort({ fecha: -1 }); 
 
