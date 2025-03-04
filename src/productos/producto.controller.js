@@ -181,15 +181,21 @@ export const productoAgotados = async (req, res) => {
 
 export const productoMasVendido = async (req, res) => {
     try {
-        const productoMasVendido = await productoModel.find().sort({ sold: -1 }).limit(5);
+        const productos = await productoModel.find().sort({ stock: 1 });
+
+        const productosModificados = productos.map(producto => ({
+            ...producto.toObject(),
+            stock: producto.stock < 0 ? 0 : producto.stock
+        }));
+
         res.status(200).json({
             success: true,
             msg: "Producto más vendido obtenido correctamente",
-            productoMasVendido
+            productoMasVendido: productosModificados
         });
-       } catch (error) {
+
+    } catch (error) {
         console.error(error);
-        res.status(500).json({msg: "Hubo un error en la obtención del producto más vendido"});
-   
+        res.status(500).json({ msg: "Hubo un error en la obtención del producto más vendido" });
     }
-}
+}; 

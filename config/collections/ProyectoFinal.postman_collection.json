@@ -52,7 +52,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\" : \"ialfaro\",\r\n    \"password\" : \"12345678\"\r\n}",
+							"raw": "{\r\n    \"username\" : \"xcastillo\",\r\n    \"password\" : \"12345678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -239,7 +239,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA1OTAwODAsImV4cCI6MTc0MDU5MzY4MH0.u3wPwIA1GQ0BKXO4Z6NT9JypXYNKtjJn7ZDBvfXeMQg",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDcyYzBlMWE0ZDE0ZTQ5NGUzZmMiLCJpYXQiOjE3NDEwMDk2MjQsImV4cCI6MTc0MTAxMzIyNH0.Esz4CchP-z9FX2SHQkyZg_J90mTbkBx7vLvi49HrO3E",
 								"type": "text"
 							}
 						],
@@ -253,7 +253,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/users/updateRole/67bf47450e1a4d14e494e3ff",
+							"raw": "http://localhost:3000/proyectofinal/users/updateRole/67bf472c0e1a4d14e494e3fc",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -263,7 +263,7 @@
 								"proyectofinal",
 								"users",
 								"updateRole",
-								"67bf47450e1a4d14e494e3ff"
+								"67bf472c0e1a4d14e494e3fc"
 							]
 						}
 					},
@@ -602,13 +602,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA5NjgxOTYsImV4cCI6MTc0MDk3MTc5Nn0.Hds2TrmElKAKJkCFsy9_q6PPuFmrRffrI0xQqpEdfj8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDEwNjM0MzEsImV4cCI6MTc0MTA2NzAzMX0.sCPdbSZDEVjOXnGGrRljsgCn9EQxI_EzkRR8401okHU",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Naranja\",\r\n    \"description\" : \"Fresca\",\r\n    \"price\" : \"100\",\r\n    \"stock\" : \"30\",\r\n    \"categoria\" : \"Frutas\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"Naranja\",\r\n    \"description\" : \"Fresca\",\r\n    \"price\" : \"130\",\r\n    \"stock\" : \"30\",\r\n    \"categoria\" : \"Frutas\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -702,7 +702,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA5Njg0NDksImV4cCI6MTc0MDk3MjA0OX0.u_uOf4fWov8lFlVj3OsVddYKj3GSygZHVA6fwN22wx0",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDEwMDk2ODksImV4cCI6MTc0MTAxMzI4OX0.srES94LM4nDxyZw_c0uRfLhL7MpDd6CI0LIQV7WcQtU",
 								"type": "text"
 							}
 						],
@@ -864,13 +864,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDcyYzBlMWE0ZDE0ZTQ5NGUzZmMiLCJpYXQiOjE3NDA5NjgyNTcsImV4cCI6MTc0MDk3MTg1N30.r939aEtyTU6mCC8NN0eB2UoU8TStEqqmkfXDfId8be8",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZTQ0ZmI2NTk0NDI2OWYxMTI3ZjgiLCJpYXQiOjE3NDEwNjczMDgsImV4cCI6MTc0MTA3MDkwOH0.lhlu0FqkEEsyEBDyuLQ8PkLmRRZRGGyyJ-o0CUUNHgI",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"usuarioId\" : \"67bf472c0e1a4d14e494e3fc\",\r\n    \"productoId\" : \"67bf9aa5cdf367a5ebef2c73\",\r\n    \"cantidad\" : \"30\"\r\n}",
+							"raw": "{\r\n    \"usuarioId\" : \"67bf472c0e1a4d14e494e3fc\",\r\n    \"productoId\": [\"67bf9aa5cdf367a5ebef2c73\", \"67bf9abecdf367a5ebef2c79\"],\r\n    \"cantidad\": [20, 30]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -902,12 +902,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDcyYzBlMWE0ZDE0ZTQ5NGUzZmMiLCJpYXQiOjE3NDA5NjY1ODgsImV4cCI6MTc0MDk3MDE4OH0.G4KKhcAcnA1cGsuXo4rhPR5DNCcjvSP8bBUjShS5Ls4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZTQ0ZmI2NTk0NDI2OWYxMTI3ZjgiLCJpYXQiOjE3NDEwNjczNjMsImV4cCI6MTc0MTA3MDk2M30.95KIEwuSwWIgmmjPlFgMKEsGqOAhTzRqrGHOrdwFo7Q",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/carrito/67c50c5d79de31e9fc0d704b",
+							"raw": "http://localhost:3000/proyectofinal/carrito/67c679b00d443dd3db99ef9d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -916,7 +916,7 @@
 							"path": [
 								"proyectofinal",
 								"carrito",
-								"67c50c5d79de31e9fc0d704b"
+								"67c679b00d443dd3db99ef9d"
 							]
 						}
 					},
@@ -932,7 +932,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDcyYzBlMWE0ZDE0ZTQ5NGUzZmMiLCJpYXQiOjE3NDA5Njk2NjcsImV4cCI6MTc0MDk3MzI2N30.9eWQkQ7qtBUwfCn3bN830eZSJa9J1vjG45G8AOYdaUg",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZTQ0ZmI2NTk0NDI2OWYxMTI3ZjgiLCJpYXQiOjE3NDEwNjczNjMsImV4cCI6MTc0MTA3MDk2M30.95KIEwuSwWIgmmjPlFgMKEsGqOAhTzRqrGHOrdwFo7Q",
 								"type": "text"
 							}
 						],
@@ -947,6 +947,77 @@
 								"proyectofinal",
 								"carrito",
 								"compra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Carrito",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDcyYzBlMWE0ZDE0ZTQ5NGUzZmMiLCJpYXQiOjE3NDEwNjM1MDksImV4cCI6MTc0MTA2NzEwOX0.yFL8xWt5-cYKVME6elmnlR_y_EnYy2xMSxfVVWeJTsY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productoId\": [\"67bf9aa5cdf367a5ebef2c73\", \"67bf9abecdf367a5ebef2c79\"],\r\n    \"cantidad\": [5, 5]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/carrito/compra/67c6855f4fd41cdad62dec64",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"carrito",
+								"compra",
+								"67c6855f4fd41cdad62dec64"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Historial Compra",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZTQ0ZmI2NTk0NDI2OWYxMTI3ZjgiLCJpYXQiOjE3NDEwNjgwMDAsImV4cCI6MTc0MTA3MTYwMH0.meNpve7JiF4uola0AzyhvMW0MzcAOk8WTGtfWfcDjk8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/carrito/historial/67c694371efe15cd5a88d019",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"carrito",
+								"historial",
+								"67c694371efe15cd5a88d019"
 							]
 						}
 					},

@@ -23,7 +23,7 @@
   "name": "Manzan",
   "description": "Veres",
   "price": 140,
-  "stock": 20,
+  "stock": 0,
   "categoria": {
     "$oid": "67bf6fd5d7fd2cfa7234e7a2"
   },
@@ -31,8 +31,9 @@
     "$date": "2025-02-26T22:49:36.997Z"
   },
   "updatedAt": {
-    "$date": "2025-02-26T22:49:36.997Z"
-  }
+    "$date": "2025-03-03T13:52:56.463Z"
+  },
+  "status": true
 },
 {
   "_id": {
@@ -41,7 +42,7 @@
   "name": "Naranja",
   "description": "Fresca",
   "price": 130,
-  "stock": 30,
+  "stock": 5,
   "categoria": {
     "$oid": "67bf6fd5d7fd2cfa7234e7a2"
   },
@@ -49,17 +50,18 @@
     "$date": "2025-02-26T22:50:13.321Z"
   },
   "updatedAt": {
-    "$date": "2025-02-26T22:50:13.321Z"
-  }
+    "$date": "2025-03-04T05:48:39.375Z"
+  },
+  "status": true
 },
 {
   "_id": {
     "$oid": "67bf9abecdf367a5ebef2c79"
   },
-  "name": "Sandia",
-  "description": "De Mercado",
-  "price": 120,
-  "stock": 40,
+  "name": "Sandi",
+  "description": "Fresca",
+  "price": 130,
+  "stock": 5,
   "categoria": {
     "$oid": "67bf6fd5d7fd2cfa7234e7a2"
   },
@@ -67,8 +69,9 @@
     "$date": "2025-02-26T22:50:38.036Z"
   },
   "updatedAt": {
-    "$date": "2025-02-26T22:50:38.036Z"
-  }
+    "$date": "2025-03-04T05:48:39.387Z"
+  },
+  "status": true
 },
 {
   "_id": {
