@@ -10,6 +10,7 @@ import productoRoutes from '../src/productos/producto.routes.js'
 import { createAdmin } from '../src/users/user-controller.js';
 import { categoriaDefecto } from '../src/categorias/categoria.controller.js';
 import carritoRoutes from '../src/carrito/carrito.routes.js';
+import facturaRoutes from '../src/factura/factura.routes.js'
 const configurarMiddlewares = (app) => {
     app.use(express.urlencoded({extended: false}));
     app.use(cors());
@@ -22,6 +23,7 @@ const configRoutes = (app) => {
     app.use('/proyectofinal/categorias', categoriaRoutes);
     app.use('/proyectofinal/productos', productoRoutes);
     app.use('/proyectofinal/carrito', carritoRoutes); 
+    app.use('/proyectofinal/facturas', facturaRoutes);  
 }
  const conectarDB = async  () => {
     try{

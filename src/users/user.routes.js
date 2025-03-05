@@ -32,9 +32,9 @@ router.delete("/deleteCliente/:id", validarUserJWT, deleteCliente, validarCampos
 
 router.get('/masvendido', ObtenerProductoMasVendido);
 
-router.get('/categorias/:id', obtenerProductosCategoria);
+router.get('/categorias/:id', validarUserJWT,obtenerProductosCategoria);
 
-router.get('/buscar/:name', buscarProductoPorNombre);
+router.get('/buscar/:name',validarUserJWT, buscarProductoPorNombre);
 
 router.get('/categorias', getCategories);
 export default router;

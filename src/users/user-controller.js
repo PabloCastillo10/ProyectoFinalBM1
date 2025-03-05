@@ -10,19 +10,19 @@ export const login = async (req, res) => {
     const {email, password, username} = req.body;
 
     try {
-        const lowerEmail = email ? email.toLowerCase() : null;
+        
         const lowerUsername = username ? username.toLowerCase() : null;
 
         const user = await userModel.findOne({
             $or: [
-                { email: lowerEmail },
+                { email },
                 { username: lowerUsername  }
             ]
         })
 
         if (!user) {
             return res.status(404).json({
-                msg: "No se encontró ningún usuario con ese email o username en la base de datos"
+                msg: "No se encontró ningún usuario con ese email o username en la base de datos (contraseña incorrecta)"
             });
         }
         const validPassword = await verify(user.password, password);
@@ -96,33 +96,45 @@ export const getUsers = async (req, res) => {
 }
 export const updateProfile = async (req, res) => {
     try {
-        const userId = req.user.id;
+        const {id} = req.params
+       const authenticatedUserId = req.user.id;
         const { name, surname, username, oldPassword, newPassword } = req.body;
         const authenticatedUser = req.user;
 
-        const user = await userModel.findById(userId);
+        if (authenticatedUser.role !== "CLIENTE_ROLE") {
+            return res.status(403).json({ msg: "No tienes permiso para editar  este usuario" });
+        }
+  
+        const user = await userModel.findById(id);
         if (!user) {
-            return res.status(404).json({ msg: "User no encontrado en la base de datos" });
+            return res.status(404).json({ msg: "Usuario no encontrado en la base de datos" });
         }
 
-        if (authenticatedUser.role === 'CLIENTE_ROLE' && authenticatedUser.id !== id) {
-            return res.status(403).json({ msg: "No puedes editar otro usuario" });
+        if(!user.status) {
+            return res.status(400).json({msg: "Usuario desactivado, no se puede actualizar"});
         }
+
+ 
+        if (authenticatedUserId !== id) {
+            return res.status(403).json({ msg: "No puedes editar otro usuario, solo el propietario puede" });
+        }
+
 
         if (username && username !== user.username) {
-            const existingUser = await userModel.findOne({ username: username.toLowerCase() }); 
+            const existingUser = await userModel.findOne({ username: username.toLowerCase() });
             if (existingUser) {
                 return res.status(400).json({ msg: "Username en uso" });
             }
-            user.username = username.toLowerCase();  
+            user.username = username.toLowerCase();
         }
 
+        
         if (newPassword) {
             if (!oldPassword) {
-                return res.status(400).json({ msg: "Contraseña antigua se requiere mano para cambiar la contraseña" });
+                return res.status(400).json({ msg: "Contraseña antigua requerida para cambiar la contraseña" });
             }
 
-            const isMatch = await verify(user.password, oldPassword); 
+            const isMatch = await verify(user.password, oldPassword);
             if (!isMatch) {
                 return res.status(400).json({ msg: "Contraseña antigua incorrecta" });
             }
@@ -130,6 +142,7 @@ export const updateProfile = async (req, res) => {
             user.password = await hash(newPassword);
         }
 
+       
         user.name = name || user.name;
         user.surname = surname || user.surname;
         await user.save();
@@ -146,7 +159,7 @@ export const updateProfile = async (req, res) => {
 
     } catch (error) {
         console.error(error);
-        res.status(500).json({ msg: "Server error", error: error.message });
+        res.status(500).json({ msg: "Error en el servidor", error: error.message });
     }
 };
 
@@ -165,6 +178,11 @@ export const deleteUser = async (req, res = response) => {
             });
         }
 
+        const authenticatedUser = req.user;
+
+        if (authenticatedUser.role !== "CLIENTE_ROLE") {
+            return res.status(403).json({ msg: "No tienes permiso para eliminar este usuario" });
+        }
    
         const user = await userModel.findById(id);
         
@@ -185,20 +203,22 @@ export const deleteUser = async (req, res = response) => {
             });
         }
 
+        
+        const authenticatedUserId = req.user.id;  
+        if (authenticatedUserId !== id) {
+            return res.status(403).json({ msg: "No puedes eliminar otro usuario, solo el propietario" });
+        }
+
         user.estado = false;
         await user.save();
 
-        const authenticatedUser = req.user;  
-        if (authenticatedUser.role === 'CLIENTE_ROLE' && authenticatedUser.id !== id) {
-            return res.status(403).json({ msg: "No puedes eliminar  otro usuario" });
-        }
 
 
         res.status(200).json({
             success: true,
             msg: 'Usuario desactivado correctamente',
             user,
-            authenticatedUser
+            authenticatedUserId
         });
 
     } catch (error) {
@@ -231,7 +251,7 @@ export const activateUser = async (req, res = response) => {
     const authenticatedUser = req.user;
         res.status(200).json({
             success: true,
-            msg: 'Usuario activad',
+            msg: 'Usuario activado',
             user,
             authenticatedUser
         });
@@ -256,7 +276,7 @@ export const createAdmin = async (req, res) => {
                 name : "Elmer",
                 surname : "Santos",
                 username: "Esantos".toLowerCase(),
-                email: "Esantos@gmail.com",
+                email: "esantos@gmail.com",
                 password : encryptedPassword,
                 role: "ADMIN_ROLE"
             });
@@ -322,7 +342,7 @@ export const updateRole = async (req , res) => {
 export const editUser = async (req, res) => {
     try {
         const { id } = req.params;
-        const { name, surname, username, oldPassword, newPassword } = req.body;
+        const { name, surname, username, email, oldPassword, newPassword } = req.body;
         const authenticatedUser = req.user;
 
       
@@ -363,6 +383,7 @@ export const editUser = async (req, res) => {
 
         user.name = name || user.name;
         user.surname = surname || user.surname;
+        user.email = email || user.email
 
         await user.save();
 
@@ -384,8 +405,11 @@ export const deleteCliente = async (req, res) => {
         const { password } = req.body;
         const authenticatedUser = req.user;
 
-        if (authenticatedUser.role !== "ADMIN_ROLE" && authenticatedUser.id !== id) {
-            return res.status(403).json({ msg: "No tienes permisos para realizar esta acción" });
+        if (authenticatedUser.role !== "ADMIN_ROLE") {
+            return res.status(403).json({
+                success: false,
+                msg: 'No tienes permiso para realizar esta acción'
+            });
         }
 
         const user = await userModel.findById(id);
@@ -413,23 +437,34 @@ export const deleteCliente = async (req, res) => {
 
 export const ObtenerProductoMasVendido = async (req, res) => {
     try {
-        const productoMasVendido = await productoModel.find().sort({ sold: -1 }).limit(5);
+        const productos = await productoModel.find().sort({ stock: 1 });
+        const productosModificados = productos.map(producto => ({
+            ...producto.toObject(),
+            stock: producto.stock < 0 ? 0 : producto.stock
+        }));
+
         res.status(200).json({
             success: true,
             msg: "Producto más vendido obtenido correctamente",
-            productoMasVendido
+            productoMasVendido: productosModificados
         });
-       } catch (error) {
+
+    } catch (error) {
         console.error(error);
-        res.status(500).json({msg: "Hubo un error en la obtención del producto más vendido"});
-   
+        res.status(500).json({ msg: "Hubo un error en la obtención del producto más vendido" });
     }
 }
 
 export const buscarProductoPorNombre = async (req, res) => {
     try {
         const { name } = req.params;
+        
+        const authenticatedUser = req.user;
+        if (authenticatedUser.role !== "CLIENTE_ROLE") {
+            return res.status(403).json({ msg: "No tienes permiso para  esta funcion" });
+        }
         const productos = await productoModel.find({ name: new RegExp(name, 'i') });
+        
         res.status(200).json({
             success: true,
             msg: "Productos obtenidos correctamente",
@@ -456,6 +491,11 @@ export const getCategories = async (req, res) => {
 export const obtenerProductosCategoria = async (req, res) => {
     try {
         const { id } = req.params;
+        const authenticatedUser = req.user;
+        if (authenticatedUser.role !== "CLIENTE_ROLE") {
+            return res.status(403).json({ msg: "No tienes permiso para  esta funcion" });
+        }
+
         const productos = await productoModel.find({ categoria: id });
         res.status(200).json({
             success: true,

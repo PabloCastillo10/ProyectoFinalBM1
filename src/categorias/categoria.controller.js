@@ -52,7 +52,7 @@ export const updateCategory = async (req, res) => {
         if (categoriaGeneral && categoriaGeneral._id.toString() === id) {
             return res.status(400).json({
                 success: false,
-                msg: 'No puedes desactivar o eliminar la categoría por defecto General'
+                msg: 'No puedes editar  la categoría por defecto General'
             });
         } 
 
@@ -60,6 +60,10 @@ export const updateCategory = async (req, res) => {
         
         if(!categoria) {
             return res.status(404).json({ msg: "Categoría no encontrada" });
+        }
+
+        if(!categoria.estado) {
+            return res.status(400).json({msg: "Categoria desactivada, no se puede actualizar"});
         }
         
         res.status(200).json({

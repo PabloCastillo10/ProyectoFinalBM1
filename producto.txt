@@ -1,0 +1,11 @@
+{
+    "usuarioId": "67bde44fb65944269f1127f8",
+    "productoId": ["67bfa35cb32b3e4ad57d39e5", "67bfa0e51d496182dc6f80ce"],
+    "cantidad": ["5", "5"]
+}
+
+{
+    "usuarioId": "67bde44fb65944269f1127f8",
+    "productoId": "67bfa35cb32b3e4ad57d39e5",
+    "cantidad": "5"
+}

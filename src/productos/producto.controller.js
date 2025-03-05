@@ -90,21 +90,25 @@ export const updateProducto = async (req, res) => {
         if (!authenticatedUser || authenticatedUser.role!== "ADMIN_ROLE" ) {
             return res.status(403).json({ msg: "No tiene permisos para actualizar productos" });
         }
+        const producto = await productoModel.findById(id);
+        if (!producto) {
+            return res.status(404).json({msg: "Producto no encontrado"});
+        }
 
+        if(!producto.status) {
+            return res.status(400).json({msg: "Producto desactivado, no se puede actualizar"});
+        }
+        
+        
+        
         const categoriaEncontrada = await categoriaModel.findOne({ name: categoria });
         if (!categoriaEncontrada) {
             return res.status(404).json({ msg: "La categoría no existe" });
         }
-
+        
         data.categoria = categoriaEncontrada._id;
-
+        
         const productoActualizado = await productoModel.findByIdAndUpdate(id, data, {new: true})
-
-        if (!productoActualizado) {
-            return res.status(404).json({msg: "Producto no encontrado"});
-        }
-
-
         res.status(200).json({
             success: true,
             msg: "Producto actualizado correctamente",

@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "CLIENTE AUTENTICADOR",
+			"name": "Autenticador ADMIN|CLIENTE",
 			"item": [
 				{
 					"name": "Registrar Usuario",
@@ -19,7 +19,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Kevin\",\r\n    \"surname\" : \"Rodriguez\",\r\n    \"username\" : \"Krodriguez\",\r\n    \"password\" : \"12345678\",\r\n    \"email\" : \"Krodriguez@gmail.com\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"lionel\",\r\n    \"surname\" : \"messi\",\r\n    \"username\" : \"lmessi\",\r\n    \"password\" : \"12345678\",\r\n    \"email\" : \"lmessi@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -85,13 +85,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZTQ0ZmI2NTk0NDI2OWYxMTI3ZjgiLCJpYXQiOjE3NDA0OTk4MzcsImV4cCI6MTc0MDUwMzQzN30.tvM0SO8UKbT4O9FfEBLhswhiVoSBGg2Puvs3-dl2qak",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDE2ZTE1NDEwYjJiYTgwNTZhZmUiLCJpYXQiOjE3NDExNTA3MzEsImV4cCI6MTc0MTE1NDMzMX0.0rZspALaeb5iBTZ3iNW5YIgEB33MmpgD8xA9uLESDfg",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"cuxum\",\r\n    \"surname\" : \"ramirez\",\r\n    \"username\" : \"xcastillo\",\r\n    \"email\" : \"Dcastillo@gmail.com\",\r\n    \"oldPassword\" : \"87654321\",\r\n    \"newPassword\" : \"12345678\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"daniel\",\r\n    \"surname\" : \"ramirez\",\r\n    \"username\" : \"dramirez\",\r\n    \"email\" : \"Dcastillo@gmail.com\",\r\n    \"oldPassword\" : \"12345678\",\r\n    \"newPassword\" : \"87654321\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -99,7 +99,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/users/67bde44fb65944269f1127f8",
+							"raw": "http://localhost:3000/proyectofinal/users/67c7d16e15410b2ba8056afe",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -108,7 +108,7 @@
 							"path": [
 								"proyectofinal",
 								"users",
-								"67bde44fb65944269f1127f8"
+								"67c7d16e15410b2ba8056afe"
 							]
 						}
 					},
@@ -124,7 +124,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA1OTE1NDEsImV4cCI6MTc0MDU5NTE0MX0.L4pQs_JAKLZvchF3UPhA9M3m4XUwjFZuOX9JqNQKD1Y",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDcyOTFiNjUzYTkzMjRhNTI2ZjMiLCJpYXQiOjE3NDExNTE1NDcsImV4cCI6MTc0MTE1NTE0N30.luJ_6UqbghDUM7x4E8syyimJVUYFvpuTSI74JLEkoyg",
 								"type": "text"
 							}
 						],
@@ -138,7 +138,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/users/activate/67bf472c0e1a4d14e494e3fc",
+							"raw": "http://localhost:3000/proyectofinal/users/activate/67c7d16e15410b2ba8056afe",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -148,7 +148,7 @@
 								"proyectofinal",
 								"users",
 								"activate",
-								"67bf472c0e1a4d14e494e3fc"
+								"67c7d16e15410b2ba8056afe"
 							],
 							"query": [
 								{
@@ -171,13 +171,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA1OTE2MzAsImV4cCI6MTc0MDU5NTIzMH0.q53_QdxJlol4FqBwgkYf9IZquh4c3RBYahcAJUMKyNA",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDE2ZTE1NDEwYjJiYTgwNTZhZmUiLCJpYXQiOjE3NDExNTE2NzksImV4cCI6MTc0MTE1NTI3OX0.6bzEDh_Esu-PqeyRj6TiLgs7i3UZxyowpw-hheCnuRs",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\" : \"12345678\"\r\n}",
+							"raw": "{\r\n    \"password\" : \"87654321\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -185,7 +185,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/users/67bf472c0e1a4d14e494e3fc",
+							"raw": "http://localhost:3000/proyectofinal/users/67c7d16e15410b2ba8056afe",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -194,7 +194,7 @@
 							"path": [
 								"proyectofinal",
 								"users",
-								"67bf472c0e1a4d14e494e3fc"
+								"67c7d16e15410b2ba8056afe"
 							]
 						}
 					},
@@ -239,7 +239,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDcyYzBlMWE0ZDE0ZTQ5NGUzZmMiLCJpYXQiOjE3NDEwMDk2MjQsImV4cCI6MTc0MTAxMzIyNH0.Esz4CchP-z9FX2SHQkyZg_J90mTbkBx7vLvi49HrO3E",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTMxNTIsImV4cCI6MTc0MTE1Njc1Mn0.-qW6MEXRE3PUVG5J9JryW7qgvZN-VNPHs-CX_z3vsRQ",
 								"type": "text"
 							}
 						],
@@ -253,7 +253,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/users/updateRole/67bf472c0e1a4d14e494e3fc",
+							"raw": "http://localhost:3000/proyectofinal/users/updateRole/67c7d16e15410b2ba8056afe",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -263,7 +263,7 @@
 								"proyectofinal",
 								"users",
 								"updateRole",
-								"67bf472c0e1a4d14e494e3fc"
+								"67c7d16e15410b2ba8056afe"
 							]
 						}
 					},
@@ -279,13 +279,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA1OTA1MjcsImV4cCI6MTc0MDU5NDEyN30.PZNjFXaAoGRLJAljO_U2F6gfsaekCIs2_ayn9WCjKno",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTI4NjYsImV4cCI6MTc0MTE1NjQ2Nn0.Cn5QNtcRknNG333pXHx4uWTyB7pxdCIeFEhA7rgmLZk",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"monroy\",\r\n    \"surname\" : \"vargas\",\r\n    \"username\" : \"mvargas\",\r\n    \"email\" : \"Ccortez@gmail.com\",\r\n    \"oldPassword\" : \"87654321\",\r\n    \"newPassword\" : \"12345678\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"alejandro\",\r\n    \"surname\" : \"cuxum\",\r\n    \"username\" : \"acuxum\",\r\n    \"email\" : \"acuxum@gmail.com\",\r\n    \"oldPassword\" : \"87654321\",\r\n    \"newPassword\" : \"12345678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -293,7 +293,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/users/edit/67bf47450e1a4d14e494e3ff",
+							"raw": "http://localhost:3000/proyectofinal/users/edit/67c7d16e15410b2ba8056afe",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -303,7 +303,7 @@
 								"proyectofinal",
 								"users",
 								"edit",
-								"67bf47450e1a4d14e494e3ff"
+								"67c7d16e15410b2ba8056afe"
 							]
 						}
 					},
@@ -319,7 +319,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA1OTA5OTMsImV4cCI6MTc0MDU5NDU5M30.byuHeZDYp6GTgzSZSBtf4w28_3ksqjpEHG4R1jr1H7Y",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTMzNTMsImV4cCI6MTc0MTE1Njk1M30.gRgGVXNTTgqb1TTLNtS_FmHDq8mV8Icni4vFwuc1Rg4",
 								"type": "text"
 							}
 						],
@@ -333,7 +333,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/users/deleteCliente/67bf472c0e1a4d14e494e3fc",
+							"raw": "http://localhost:3000/proyectofinal/users/deleteCliente/67c7d16e15410b2ba8056afe",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -343,7 +343,7 @@
 								"proyectofinal",
 								"users",
 								"deleteCliente",
-								"67bf472c0e1a4d14e494e3fc"
+								"67c7d16e15410b2ba8056afe"
 							]
 						}
 					},
@@ -364,13 +364,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MDkxNDEsImV4cCI6MTc0MDYxMjc0MX0.b-pLdDd6I-rF__6guDWRnLC9mflHCyd_jOcRRNU70rA",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTM2NDcsImV4cCI6MTc0MTE1NzI0N30.3A8nFwTjPKlkmY8Z9U4rs-VzOjMDNHnj5mI7rPbb5kQ",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Tecnologia\",\r\n    \"description\" : \"De ultima generacion\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"Limpieza personal\",\r\n    \"description\" : \"De lo mejor\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -427,7 +427,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MDMzNzUsImV4cCI6MTc0MDYwNjk3NX0.MXIbzkfw0Ctdq9pRDYxQL79sUYFa03A07IoKOxEA_vE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTM2NDcsImV4cCI6MTc0MTE1NzI0N30.3A8nFwTjPKlkmY8Z9U4rs-VzOjMDNHnj5mI7rPbb5kQ",
 								"type": "text"
 							}
 						],
@@ -441,7 +441,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/categorias/67bf690746bc0236e128f0fc",
+							"raw": "http://localhost:3000/proyectofinal/categorias/67c7d13115410b2ba8056afb",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -450,7 +450,7 @@
 							"path": [
 								"proyectofinal",
 								"categorias",
-								"67bf690746bc0236e128f0fc"
+								"67c7d13115410b2ba8056afb"
 							]
 						}
 					},
@@ -466,12 +466,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTI4ODQsImV4cCI6MTc0MDYxNjQ4NH0.O31-WfvD0YEvJWsXNZrq9VGnP8IJ34RmruGa2F1yIYY",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTM2NDcsImV4cCI6MTc0MTE1NzI0N30.3A8nFwTjPKlkmY8Z9U4rs-VzOjMDNHnj5mI7rPbb5kQ",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/categorias/67bf6d564cf084b642f72cdc",
+							"raw": "http://localhost:3000/proyectofinal/categorias/67c7e5f11ad025a4ba0513f9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -480,7 +480,7 @@
 							"path": [
 								"proyectofinal",
 								"categorias",
-								"67bf6d564cf084b642f72cdc"
+								"67c7e5f11ad025a4ba0513f9"
 							]
 						}
 					},
@@ -496,12 +496,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTI4ODQsImV4cCI6MTc0MDYxNjQ4NH0.O31-WfvD0YEvJWsXNZrq9VGnP8IJ34RmruGa2F1yIYY",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTM2NDcsImV4cCI6MTc0MTE1NzI0N30.3A8nFwTjPKlkmY8Z9U4rs-VzOjMDNHnj5mI7rPbb5kQ",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/categorias/activate/67bf6d564cf084b642f72cdc",
+							"raw": "http://localhost:3000/proyectofinal/categorias/activate/67c7e5f11ad025a4ba0513f9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -511,7 +511,7 @@
 								"proyectofinal",
 								"categorias",
 								"activate",
-								"67bf6d564cf084b642f72cdc"
+								"67c7e5f11ad025a4ba0513f9"
 							],
 							"query": [
 								{
@@ -539,13 +539,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MDk1MjUsImV4cCI6MTc0MDYxMzEyNX0.x7FCVC-arFzVKqtiMMz3LTb7J7hXsUdwX894ytliFko",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTM2NDcsImV4cCI6MTc0MTE1NzI0N30.3A8nFwTjPKlkmY8Z9U4rs-VzOjMDNHnj5mI7rPbb5kQ",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Peras\",\r\n    \"description\" : \"De Guatemala\",\r\n    \"price\" : \"100\",\r\n    \"stock\" : \"0\",\r\n    \"categoria\" : \"Frutas\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"Licuadora\",\r\n    \"description\" : \"Ultima generacion\",\r\n    \"price\" : \"170\",\r\n    \"stock\" : \"70\",\r\n    \"categoria\" : \"Electrodomesticos\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -602,13 +602,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDExMDkyODksImV4cCI6MTc0MTExMjg4OX0.v8xrHpJmDJ5wv0dWHGU661H0c7wGjsyXV1V0WYMP-zE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTM2NDcsImV4cCI6MTc0MTE1NzI0N30.3A8nFwTjPKlkmY8Z9U4rs-VzOjMDNHnj5mI7rPbb5kQ",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Pera\",\r\n    \"description\" : \"Fresca\",\r\n    \"price\" : \"160\",\r\n    \"stock\" : \"70\",\r\n    \"categoria\" : \"Frutas\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"Peras\",\r\n    \"description\" : \"Frescas\",\r\n    \"price\" : \"170\",\r\n    \"stock\" : \"70\",\r\n    \"categoria\" : \"Frutas\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -616,7 +616,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/productos/67bfa35cb32b3e4ad57d39e5",
+							"raw": "http://localhost:3000/proyectofinal/productos/67c7eb37cd7576d2dd2f9a22",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -625,7 +625,7 @@
 							"path": [
 								"proyectofinal",
 								"productos",
-								"67bfa35cb32b3e4ad57d39e5"
+								"67c7eb37cd7576d2dd2f9a22"
 							]
 						}
 					},
@@ -641,12 +641,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTEwNDMsImV4cCI6MTc0MDYxNDY0M30.S0gRDlfPqByUJUavpTakL2Mzhhta-c4FMEkJLhqAWrI",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTM2NDcsImV4cCI6MTc0MTE1NzI0N30.3A8nFwTjPKlkmY8Z9U4rs-VzOjMDNHnj5mI7rPbb5kQ",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/productos/67bf9b07cdf367a5ebef2c7f",
+							"raw": "http://localhost:3000/proyectofinal/productos/67c7eb37cd7576d2dd2f9a22",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -655,7 +655,7 @@
 							"path": [
 								"proyectofinal",
 								"productos",
-								"67bf9b07cdf367a5ebef2c7f"
+								"67c7eb37cd7576d2dd2f9a22"
 							]
 						}
 					},
@@ -671,12 +671,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDA2MTEzNzEsImV4cCI6MTc0MDYxNDk3MX0.g0TIihVfWVE-pdoDR-epaHnRblxnZtP3NmgPMaqTRyg",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTM2NDcsImV4cCI6MTc0MTE1NzI0N30.3A8nFwTjPKlkmY8Z9U4rs-VzOjMDNHnj5mI7rPbb5kQ",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/productos/activate/67bf9b07cdf367a5ebef2c7f",
+							"raw": "http://localhost:3000/proyectofinal/productos/activate/67c7eb37cd7576d2dd2f9a22",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -686,7 +686,7 @@
 								"proyectofinal",
 								"productos",
 								"activate",
-								"67bf9b07cdf367a5ebef2c7f"
+								"67c7eb37cd7576d2dd2f9a22"
 							]
 						}
 					},
@@ -702,7 +702,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDEwMDk2ODksImV4cCI6MTc0MTAxMzI4OX0.srES94LM4nDxyZw_c0uRfLhL7MpDd6CI0LIQV7WcQtU",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTk3NTYsImV4cCI6MTc0MTE2MzM1Nn0.F7jYCsHzln-Myh1WaWpWfdXjLo9_nu2I0hlF-yqVIiE",
 								"type": "text"
 							}
 						],
@@ -782,9 +782,15 @@
 							"type": "noauth"
 						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDE2ZTE1NDEwYjJiYTgwNTZhZmUiLCJpYXQiOjE3NDExNTc0ODMsImV4cCI6MTc0MTE2MTA4M30.XOUyq7OOYy-SUosPW_Vrhrb0ePmeo8NdYLea8Keg-0w",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/users/buscar/M",
+							"raw": "http://localhost:3000/proyectofinal/users/buscar/Dr",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -794,7 +800,7 @@
 								"proyectofinal",
 								"users",
 								"buscar",
-								"M"
+								"Dr"
 							]
 						}
 					},
@@ -831,9 +837,15 @@
 							"type": "noauth"
 						},
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDE2ZTE1NDEwYjJiYTgwNTZhZmUiLCJpYXQiOjE3NDExNTc0ODMsImV4cCI6MTc0MTE2MTA4M30.XOUyq7OOYy-SUosPW_Vrhrb0ePmeo8NdYLea8Keg-0w",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/users/categorias/67bf6fd5d7fd2cfa7234e7a2",
+							"raw": "http://localhost:3000/proyectofinal/users/categorias/67c7e5ba1ad025a4ba0513f3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -843,7 +855,7 @@
 								"proyectofinal",
 								"users",
 								"categorias",
-								"67bf6fd5d7fd2cfa7234e7a2"
+								"67c7e5ba1ad025a4ba0513f3"
 							]
 						}
 					},
@@ -864,13 +876,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZTQ0ZmI2NTk0NDI2OWYxMTI3ZjgiLCJpYXQiOjE3NDExMDk1NTAsImV4cCI6MTc0MTExMzE1MH0.e0JnTzvYwL_hZ1QP4mLexIwe8IRQ0R9Lyg3GcFz_9v4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjdjM2FkYjAwMDkwMDM5ODQwYTUiLCJpYXQiOjE3NDExNTgzNTEsImV4cCI6MTc0MTE2MTk1MX0.xEHOiu_NbGCIelCHChnJ_Gko2W-aJwSdaFS1IMi5sys",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"usuarioId\" : \"67bde44fb65944269f1127f8\",\r\n    \"productoId\": [\"67bf9a09cdf367a5ebef2c65\", \"67bf9a80cdf367a5ebef2c6d\"],\r\n    \"cantidad\": [5, 5]\r\n}",
+							"raw": "{\r\n    \"usuarioId\": \"67c7f7c3adb00090039840a5\",\r\n    \"productoId\": [\"67c7ea94cd7576d2dd2f9a14\", \"67c7ea59cd7576d2dd2f9a0e\"],\r\n    \"cantidad\": [\"5\", \"5\"]\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -902,12 +914,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZTQ0ZmI2NTk0NDI2OWYxMTI3ZjgiLCJpYXQiOjE3NDExMDk1NTAsImV4cCI6MTc0MTExMzE1MH0.e0JnTzvYwL_hZ1QP4mLexIwe8IRQ0R9Lyg3GcFz_9v4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZjdjM2FkYjAwMDkwMDM5ODQwYTUiLCJpYXQiOjE3NDExNTkwMDYsImV4cCI6MTc0MTE2MjYwNn0.GXdB0V93eMU0za25UpNY32gnlBivRYBeKk3y-GWvIPg",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/carrito/67c679b00d443dd3db99ef9d",
+							"raw": "http://localhost:3000/proyectofinal/carrito/67c7f7fdadb00090039840aa",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -916,7 +928,7 @@
 							"path": [
 								"proyectofinal",
 								"carrito",
-								"67c679b00d443dd3db99ef9d"
+								"67c7f7fdadb00090039840aa"
 							]
 						}
 					},
@@ -932,7 +944,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZTQ0ZmI2NTk0NDI2OWYxMTI3ZjgiLCJpYXQiOjE3NDExMDk1NTAsImV4cCI6MTc0MTExMzE1MH0.e0JnTzvYwL_hZ1QP4mLexIwe8IRQ0R9Lyg3GcFz_9v4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDcyOTFiNjUzYTkzMjRhNTI2ZjMiLCJpYXQiOjE3NDExNTkzMTcsImV4cCI6MTc0MTE2MjkxN30.kT3ifN5YCtZbYWt-2biPSpn0UKs2gX8mIM3EmQfypLA",
 								"type": "text"
 							}
 						],
@@ -946,7 +958,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/carrito/compra",
+							"raw": "http://localhost:3000/proyectofinal/carrito/compra/67c7f710adb000900398408d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -955,12 +967,18 @@
 							"path": [
 								"proyectofinal",
 								"carrito",
-								"compra"
+								"compra",
+								"67c7f710adb000900398408d"
 							]
 						}
 					},
 					"response": []
-				},
+				}
+			]
+		},
+		{
+			"name": "Factura",
+			"item": [
 				{
 					"name": "Editar Factura",
 					"request": {
@@ -971,13 +989,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmNDE0ZmFmOTIyYmY2MTViOThlZTkiLCJpYXQiOjE3NDExMTAzNjQsImV4cCI6MTc0MTExMzk2NH0.Z4hossQa7NPp4ufjAXA-uPAe0O2ZMwtMWqNiT1IAhVc",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNTk3NTYsImV4cCI6MTc0MTE2MzM1Nn0.F7jYCsHzln-Myh1WaWpWfdXjLo9_nu2I0hlF-yqVIiE",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"productoId\": [\"67bf9a09cdf367a5ebef2c65\", \"67bf9a80cdf367a5ebef2c6d\"],\r\n    \"cantidad\": [4, 4]\r\n}",
+							"raw": "{\r\n    \"productoId\": [\"67c7ea59cd7576d2dd2f9a0e\", \"67c7ea94cd7576d2dd2f9a14\"],\r\n    \"cantidad\": [40, 50]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -985,7 +1003,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/carrito/compra/67c73999431c5f329f87ca7c",
+							"raw": "http://localhost:3000/proyectofinal/facturas/67c7fadc20eb65834dc248f3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -993,9 +1011,8 @@
 							"port": "3000",
 							"path": [
 								"proyectofinal",
-								"carrito",
-								"compra",
-								"67c73999431c5f329f87ca7c"
+								"facturas",
+								"67c7fadc20eb65834dc248f3"
 							]
 						}
 					},
@@ -1014,7 +1031,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JkZTQ0ZmI2NTk0NDI2OWYxMTI3ZjgiLCJpYXQiOjE3NDExMDE5MjksImV4cCI6MTc0MTEwNTUyOX0.MiWkiRFHCBf2YqxySu0wVqCz6jLkGjzBwr7gY5yhxWA",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDcyOTFiNjUzYTkzMjRhNTI2ZjMiLCJpYXQiOjE3NDExNjAwODAsImV4cCI6MTc0MTE2MzY4MH0.yE7vujzrmr28cw8Vb6kMF_-IyqZB04IWM7VHcQx-Dvs",
 								"type": "text"
 							}
 						],
@@ -1028,7 +1045,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/proyectofinal/carrito/historial/67bde44fb65944269f1127f8",
+							"raw": "http://localhost:3000/proyectofinal/facturas/historial/67c7fadc20eb65834dc248f3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1036,9 +1053,72 @@
 							"port": "3000",
 							"path": [
 								"proyectofinal",
-								"carrito",
+								"facturas",
 								"historial",
-								"67bde44fb65944269f1127f8"
+								"67c7fadc20eb65834dc248f3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Producto Factura",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNjAyNDIsImV4cCI6MTc0MTE2Mzg0Mn0.ah1PBFEQd2ANAH6d1YQ2KJCtp7rf8_UFMQjEApgu_AE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/facturas/factura/67c7fadc20eb65834dc248f3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"facturas",
+								"factura",
+								"67c7fadc20eb65834dc248f3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalle Factura",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M3ZDI3NGQ5YWZkMWViYjdiZjkzY2IiLCJpYXQiOjE3NDExNjAyNDIsImV4cCI6MTc0MTE2Mzg0Mn0.ah1PBFEQd2ANAH6d1YQ2KJCtp7rf8_UFMQjEApgu_AE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/proyectofinal/facturas/detalle/67c7fadc20eb65834dc248f3/67c7ea59cd7576d2dd2f9a0e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"proyectofinal",
+								"facturas",
+								"detalle",
+								"67c7fadc20eb65834dc248f3",
+								"67c7ea59cd7576d2dd2f9a0e"
 							]
 						}
 					},
